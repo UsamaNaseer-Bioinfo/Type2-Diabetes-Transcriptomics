@@ -26,7 +26,7 @@ head(dat.long)
 
 # Step 5: Visualizations
 
-# A. Global Distribution (This will work immediately)
+# A. Global Distribution 
 dat.long %>%
   ggplot(aes(x = expression, fill = disease_state)) +
   geom_density(alpha = 0.5) +
