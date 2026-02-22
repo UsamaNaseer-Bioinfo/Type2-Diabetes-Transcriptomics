@@ -17,7 +17,7 @@ ex <- exprs(data_input)
 #Convert to a dataframe and make the row names a 'gene' column
 dat <- as.data.frame(ex) %>%
   rownames_to_column(var = "gene")
-#Reshape from wide to long (just like your script)
+#Reshape from wide to long 
 data.modified <- dat %>%
   gather(key = 'samples' , value = 'expression',-gene )
 head(data.modified)
@@ -51,4 +51,5 @@ dat.long %>%
   ggplot(aes(x = expression, fill = disease_state)) +
   geom_density(alpha = 0.5) +
   theme_minimal() +
+
   labs(title = "Global Gene Expression Distribution")
